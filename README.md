@@ -100,3 +100,47 @@ ai-governance-control-tower/
 └── notes/
     ├── aif-c01-study-notes.md
     └── aigp-study-notes.md
+
+---
+
+## Day 4 Status
+
+Public repository initialized.
+
+Current focus:
+
+- Establishing repository structure
+- Defining project purpose and story
+- Creating first governance artifacts
+- Preparing AI use case intake and review workflow
+- Aligning project work with AWS AI Practitioner / AIF-C01 study
+
+---
+
+## Governance Framework Direction
+
+This project will progressively align to practical governance themes drawn from:
+
+- AI risk management
+- Responsible AI review
+- Data governance and lineage
+- Human oversight
+- Model/service monitoring
+- Cloud AI service governance
+- Auditability and operational accountability
+
+The first version focuses on building usable governance artifacts before expanding into automation, dashboards, and control monitoring.
+
+---
+
+## Sprint Build Philosophy
+
+This project follows a certification-to-portfolio sprint model.
+
+Each sprint day should produce at least one visible artifact, improvement, commit, or documented learning that can support:
+
+- GitHub portfolio credibility
+- LinkedIn content
+- Interview talking points
+- Consulting service development
+- AI governance architecture maturity

@@ -1,0 +1,4 @@
+git commit -m "Add Amazon Bedrock prompt engineering lab"
+
+git config user.name "Arval Headrick Jr."
+git config user.email "arval_headrick@yahoo.com"
