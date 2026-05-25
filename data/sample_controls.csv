@@ -1,0 +1,4 @@
+control_id,control_name,domain,expected_evidence,status
+CTRL-001,Document AI system purpose,AI Governance,system purpose statement,Not Started
+CTRL-002,Identify data source lineage,Data Governance,lineage documentation,Not Started
+CTRL-003,Validate model output against policy,AI Validation,validation result log,Not Started
