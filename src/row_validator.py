@@ -1,11 +1,12 @@
 # filename: src/row_validator.py
 
 import csv
+import sys
 from pathlib import Path
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-INPUT_FILE = BASE_DIR / "data" / "sample_controls.csv"
+DEFAULT_INPUT_FILE = BASE_DIR / "data" / "sample_controls.csv"
 
 REQUIRED_COLUMNS = [
     "control_id",
@@ -14,6 +15,22 @@ REQUIRED_COLUMNS = [
     "expected_evidence",
     "status",
 ]
+
+
+def get_input_file() -> Path:
+    """
+    Get the input CSV file from the command line.
+    If no filename is provided, use the default sample_controls.csv file.
+    """
+    if len(sys.argv) > 1:
+        input_path = Path(sys.argv[1])
+
+        if not input_path.is_absolute():
+            input_path = BASE_DIR / input_path
+
+        return input_path
+
+    return DEFAULT_INPUT_FILE
 
 
 def read_csv(file_path: Path) -> list[dict]:
@@ -80,14 +97,14 @@ def validate_required_values(rows: list[dict]) -> bool:
     return all_rows_valid
 
 
-def validate_rows(rows: list[dict]) -> None:
+def validate_rows(rows: list[dict]) -> bool:
     """
     Run validation checks against the CSV rows.
     """
     print(f"Rows loaded: {len(rows)}")
 
     if not rows:
-        return
+        return False
 
     print("\nColumns detected:")
     for column in rows[0].keys():
@@ -96,16 +113,24 @@ def validate_rows(rows: list[dict]) -> None:
     print("\nValidation checks:")
     columns_valid = validate_required_columns(rows)
 
-    if columns_valid:
-        validate_required_values(rows)
+    if not columns_valid:
+        return False
 
-    print("\nSample first row:")
-    print(rows[0])
+    return validate_required_values(rows)
 
 
 def main() -> None:
-    rows = read_csv(INPUT_FILE)
-    validate_rows(rows)
+    input_file = get_input_file()
+
+    print(f"Input file: {input_file}")
+
+    rows = read_csv(input_file)
+    validation_passed = validate_rows(rows)
+
+    if validation_passed:
+        print("\nOVERALL RESULT: PASS")
+    else:
+        print("\nOVERALL RESULT: FAIL")
 
 
 if __name__ == "__main__":
