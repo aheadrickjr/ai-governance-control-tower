@@ -182,6 +182,20 @@ Each sprint day should produce at least one visible artifact, improvement, commi
 - AI governance architecture maturity
 --
 #############################################
+###     Day 8 Validator Checkpoint        ###
+#############################################
+
+Day 8 established the first working validator foundation for the AI Governance Control Tower sprint.
+
+### Files Added
+
+```text
+data/sample_controls.csv
+data/sample_neg_controls.csv
+src/validator.py
+src/row_validator.py
+##
+#############################################
 ###       Regulatory Domain Anchor        ###
 #############################################
 ##
