@@ -46,3 +46,12 @@ Current working IAM user:
 
 ```text
 tpd-admin
+################################################
+## Budget Setup Status
+################################################
+AWS monthly lab budget has been configured.
+
+Budget name:
+
+```text
+gad-ai-governance-lab-monthly-budget
