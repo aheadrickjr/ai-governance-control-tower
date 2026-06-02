@@ -38,11 +38,9 @@ All normal build work must use a dedicated IAM user.
 
 ## IAM Naming Standard
 
-## IAM Access Update
+### IAM Group
 
-A dedicated IAM user is now being used for sprint cloud work.
-
-Current working IAM user:
+Use:
 
 ```text
-tpd-admin
+gad-admins
