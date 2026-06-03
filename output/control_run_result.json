@@ -1,0 +1,27 @@
+{
+  "audit_type": "control_run_result",
+  "control_tower": "AI Governance Control Tower",
+  "source_file": "data\\sample_neg_controls.csv",
+  "validation_status": "FAILED",
+  "error_count": 1,
+  "errors": [
+    "Row 3: Missing required value for 'expected_evidence'"
+  ],
+  "dq_score": 90,
+  "dq_severity": "LOW",
+  "metadata": {
+    "file_name": "sample_neg_controls.csv",
+    "file_path": "data\\sample_neg_controls.csv",
+    "row_count": 3,
+    "column_count": 5,
+    "columns": [
+      "control_id",
+      "control_name",
+      "domain",
+      "expected_evidence",
+      "status"
+    ],
+    "source_system": "AI Governance Control Tower"
+  },
+  "captured_at_utc": "2026-06-03T13:26:48.644349+00:00"
+}
