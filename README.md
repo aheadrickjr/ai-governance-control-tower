@@ -254,3 +254,16 @@ src/      Validation, scoring, metadata, and audit logic
 output/   Generated audit evidence and review outputs
 scripts/  Repeatable execution and sprint review utilities
 docs/     Governance documentation and sprint control notes
+##################################################
+---
+
+## How to Run the Current Prototype
+
+The current prototype can run an integrated control validation flow from a single command.
+
+### Positive Control Run
+
+Run the valid sample file:
+
+```powershell
+python src/control_run.py data/sample_controls.csv
